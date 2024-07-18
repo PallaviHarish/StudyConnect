@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyConnect</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'flashcards/css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header-title">StudyConnect</h1>
+        </header>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="footer">
+        StudyConnect &copy; 2024
+    </div>
+</body>
+</html>
