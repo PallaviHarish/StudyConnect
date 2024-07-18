@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="section-title">Add a question</h2>
+<form method="post">
+    {% csrf_token %}
+    <div>
+        {{ flashcard_form.question.label_tag }}<br>
+        {{ flashcard_form.question }}
+    </div>
+    <div>
+        {{ flashcard_form.answer.label_tag }}<br>
+        {{ flashcard_form.answer }}
+    </div>
+    <div>
+        {{ flashcard_form.topic.label_tag }}<br>
+        {{ flashcard_form.topic }}
+    </div>
+    <h3>Options:</h3>
+    {% for form in option_forms %}
+        <div>
+            {{ form.option_text.label_tag }}<br>
+            {{ form.option_text }}
+        </div>
+    {% endfor %}
+    <button type="submit">Add Question</button>
+</form>
+{% endblock %}

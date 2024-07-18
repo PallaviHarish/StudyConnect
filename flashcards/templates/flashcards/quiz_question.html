@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="section-title">Question</h2>
+<h3>{{ flashcard.question }}</h3>
+<form method="post" action="{% url 'quiz_question' pk=flashcard.pk %}">
+    {% csrf_token %}
+    <div class="option-group">
+        {% for option in options %}
+        <label>
+            <input type="radio" id="option{{ forloop.counter }}" name="option" value="{{ option.option_text }}">
+            {{ option.option_text }}
+        </label>
+        {% endfor %}
+    </div>
+    <button type="submit">Submit Answer</button>
+</form>
+
+{% if answer_feedback %}
+<p class="{% if answer_feedback == 'Correct!' %}correct{% else %}incorrect{% endif %}">{{ answer_feedback }}</p>
+{% endif %}
+{% endblock %}
