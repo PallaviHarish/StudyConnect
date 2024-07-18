@@ -1,0 +1,210 @@
+/* flashcards/static/flashcards/css/styles.css */
+
+/* Body and basic reset */
+body {
+    font-family: 'Poppins', Courier, monospace;
+    background-color: rgb(252, 253, 230);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    color: #744721;
+}
+.container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(252, 253, 230);
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+/* Headers and text styles */
+.header-title {
+    color: #744721;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    font-size: large;
+    text-decoration: none;
+    color: #744721;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+button {
+    background-color: #744721;
+    color: rgb(242, 245, 185);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: rgb(240, 244, 169);
+    color: #744721;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    color: #744721;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+form > div {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #744721;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Feedback message styles */
+p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.correct {
+    color: rgb(64, 130, 64);
+    font-size: 20px;
+}
+
+.incorrect {
+    color: rgb(218, 61, 61);
+    font-size: 20px;
+}
+
+/* Additional styles for improved layout */
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    border-bottom: 2px solid #744721;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.flashcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flashcard {
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.flashcard:hover {
+    transform: scale(1.05);
+}
+
+.flashcard h3 {
+    color: #744721;
+}
+
+.footer {
+    /* padding-top: 100px; */
+    text-align: center;
+    padding: 10px;
+    background-color: #744721;
+    color: rgb(252, 253, 230);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+/* FontAwesome-like UI specific styles */
+.fa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fa-card {
+    width: 300px;
+    padding: 20px;
+    /* background-color: #f8bb25; */
+    background-color: #8b5f3b;
+    /* border: 2px solid #744621ab; */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-card:hover {
+    transform: scale(1.05);
+}
+
+.fa-card h3 {
+    color: rgb(235, 241, 121);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.fa-card p {
+    color: #333;
+}
+
+.fa-card button {
+    background-color: #744721;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.fa-card button:hover {
+    /* background-color: #E54C44; */
+    background-color: rgb(240, 244, 169);
+    color: #744721;
+}
