@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Quiz Flashcards</h2>
+<ul>
+    {% for flashcard in flashcards %}
+    <li>
+        <a href="{% url 'quiz_question' pk=flashcard.pk %}">{{ flashcard.question }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
